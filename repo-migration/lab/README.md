@@ -14,6 +14,7 @@ In this lab, you will:
 
 - Git installed on your local machine
 - Access to a DevOps platform ([GitHub](https://github.com), [Azure DevOps](https://dev.azure.com), [GitLab](https://gitlab.com), etc.)
+  - For Azure DevOps setup instructions, see our [Azure DevOps Setup Guide](../wiki/azure-devops-setup.md)
 - Basic familiarity with Git commands
 - A text editor or IDE
 
@@ -134,13 +135,13 @@ If you want to practice more advanced migration techniques:
    cd ..
    git clone <your-original-repository-url> weather-app-extract
    cd weather-app-extract
-   
+
    # Extract the src/app folder with history
    git filter-repo --path src/app/ --path-rename src/app/:./
-   
+
    # Add the new repository as a remote
    git remote add restructured <your-restructured-repository-url>
-   
+
    # Push to the new repository
    git push restructured --all
    git push restructured --tags
@@ -163,3 +164,4 @@ These skills are essential for managing code in a DevOps environment, especially
 - [Git Documentation](https://git-scm.com/doc)
 - [Git Filter-Repo Documentation](https://github.com/newren/git-filter-repo)
 - [Moving Folders Between Repositories Wiki](../wiki/README.md)
+- [Azure DevOps Setup Guide](../wiki/azure-devops-setup.md)

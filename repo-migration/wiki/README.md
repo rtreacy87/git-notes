@@ -25,6 +25,10 @@ This wiki provides comprehensive guidance on how to move folders between DevOps 
 - [Appendix D: Security Considerations](./appendices/appendix-d-security-considerations.md)
 - [Appendix E: Glossary and Reference](./appendices/appendix-e-glossary-reference.md)
 
+### Platform Setup Guides
+
+- [Azure DevOps Setup Guide](./azure-devops-setup.md)
+
 ## How to Use This Wiki
 
 1. Start with the [Introduction and Prerequisites](./wiki-01-introduction-prerequisites.md) to understand the concepts and prepare your environment.

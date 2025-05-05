@@ -45,6 +45,7 @@ This migration approach is ideal for:
    - Write access to both source and destination repositories
    - Permission to force-push to protected branches (if applicable)
    - Ability to temporarily disable branch policies (if needed)
+   - For Azure DevOps setup, refer to our [Azure DevOps Setup Guide](./azure-devops-setup.md)
 
 4. **Backup Solution**
    - Method to create full backups of both repositories before starting
@@ -117,6 +118,7 @@ Once you've confirmed you have all prerequisites in place and have considered th
 - [Preparation Steps](./wiki-03-preparation-steps.md)
 - [Appendix A: Tool Installation Guide](./appendices/appendix-a-tool-installation.md)
 - [Appendix D: Security Considerations](./appendices/appendix-d-security-considerations.md)
+- [Azure DevOps Setup Guide](./azure-devops-setup.md)
 
 ## Glossary
 
