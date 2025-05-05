@@ -13,7 +13,7 @@ In this lab, you will:
 ## Prerequisites
 
 - Git installed on your local machine
-- Access to a DevOps platform (GitHub, Azure DevOps, GitLab, etc.)
+- Access to a DevOps platform ([GitHub](https://github.com), [Azure DevOps](https://dev.azure.com), [GitLab](https://gitlab.com), etc.)
 - Basic familiarity with Git commands
 - A text editor or IDE
 
