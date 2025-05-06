@@ -217,6 +217,79 @@ az repos clone --repository <repository-name> --org <organization-url>
 - **Missing features**: Some features may require specific Azure DevOps plans or extensions.
 - **CLI connection issues**: Verify your authentication and organization settings with `az devops configure --list`.
 
+## Troubleshooting Azure CLI Authentication in WSL
+
+When using Azure CLI in Windows Subsystem for Linux (WSL), you may encounter issues with browser-based authentication. Here's how to resolve common problems:
+
+### Issue: Browser Launch Failures in WSL
+
+WSL often cannot launch browsers directly, resulting in errors like:
+```
+/usr/bin/xdg-open: 882: x-www-browser: not found
+xdg-open: no method available for opening 'https://login.microsoftonline.com/...'
+```
+
+### Solution 1: Use Device Code Authentication
+
+The simplest solution is to use device code authentication:
+
+```bash
+# Login using device code flow
+az login --use-device-code
+```
+
+This will display a code and URL. Open the URL in any browser (on your Windows host or another device), enter the code, and complete the authentication process.
+
+### Solution 2: Configure WSL to Use Windows Browser
+
+1. Add this to your `~/.bashrc` or `~/.zshrc` file:
+
+```bash
+# Configure WSL to use Windows browser for authentication
+export BROWSER="powershell.exe /C start"
+```
+
+2. Reload your shell configuration:
+
+```bash
+source ~/.bashrc  # or source ~/.zshrc
+```
+
+3. Try logging in again:
+
+```bash
+az login
+```
+
+### Solution 3: Use Azure CLI from Windows
+
+If you continue to have issues, consider using Azure CLI directly from Windows:
+
+1. Install Azure CLI on Windows
+2. Open PowerShell or Command Prompt
+3. Run `az login` from there
+4. Your credentials will be shared with WSL
+
+### Solution 4: Use Service Principal Authentication
+
+For automated scripts or CI/CD pipelines, use service principal authentication:
+
+```bash
+# Login with service principal
+az login --service-principal -u <app-id> -p <password-or-cert> --tenant <tenant-id>
+```
+
+### Verifying Successful Login
+
+After logging in through any method, verify your authentication:
+
+```bash
+# List your subscriptions to verify login
+az account list --output table
+```
+
+If you see your subscriptions listed, you've successfully authenticated.
+
 ## Additional Resources
 
 - [Azure DevOps Documentation](https://docs.microsoft.com/en-us/azure/devops/)
