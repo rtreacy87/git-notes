@@ -135,7 +135,7 @@ This guide explains how to work on code and tests in parallel using separate Git
 
    Step 1: Initial state
    
-  ![Git Workflow Step 1](https://github.com/rtreacy87/git-notes/figures/git_workflow_step1.png)  
+   ![Git Workflow Step 1](https://raw.githubusercontent.com/rtreacy87/git-notes/main/figures/git_workflow_step1.png)
 
   In the initial state:
 
