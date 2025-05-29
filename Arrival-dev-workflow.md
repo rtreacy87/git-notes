@@ -135,12 +135,9 @@ This guide explains how to work on code and tests in parallel using separate Git
 
    Step 1: Initial state
    
-  origin/main    local/main    testing
-       A---B---C      A           A---D
-           |           |           |
-           |           |           |
+  ![Git Workflow Step 1](https://github.com/rtreacy87/git-notes/figures/git_workflow_step1.png)  
 
-   In the initial state:
+  In the initial state:
 
    1. `origin/main` (the remote repository) has commits A, B, and C
    2. `local/main` (your local copy of main) only has commit A (it's outdated)
@@ -149,10 +146,8 @@ This guide explains how to work on code and tests in parallel using separate Git
   
    Step 2: After git pull origin main
    
-   origin/main    local/main    testing
-       A---B---C      A---B---C    A---D
-           |           |           |
-           |           |           |
+   
+  ![Git Workflow Step 2](https://github.com/rtreacy87/git-notes/figures/git_workflow_step2.png)  
 
    After running `git pull origin main`, only your local main branch is updated with commits B and C from the remote main branch. 
 
@@ -165,18 +160,7 @@ This guide explains how to work on code and tests in parallel using separate Git
 
    Step 3: After git merge main
    
-   origin/main    local/main    testing
-       A---B---C      A---B---C    A---D---M
-           |           |           |     /
-           |           |           |    /
-           |           |           |   /
-           |           |           |  /
-           |           |           | /
-           |           |           |/
-           |           |          /|
-           |           |         / |
-           |           |        /  |
-                                B--C
+  ![Git Workflow Step 3](https://github.com/rtreacy87/git-note/sfigures/git_workflow_step3.png)  
 
     After `git merge main` is called:
 
