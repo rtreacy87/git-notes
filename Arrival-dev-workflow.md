@@ -153,9 +153,9 @@ This guide explains how to work on code and tests in parallel using separate Git
 
    The `git merge main` command that follows is what actually brings those changes (B and C) from your local main branch into your testing branch.
 
-  ![Git Workflow Step 3](https://github.com/rtreacy87/git-note/sfigures/git_workflow_step3.png)  
+   ![Git Workflow Step 3](https://raw.githubusercontent.com/rtreacy87/git-notes/main/figures/git_workflow_step3.png)
 
-    After `git merge main` is called:
+   After `git merge main` is called:
 
    1. Git takes the changes from your local main branch (commits B and C)
    2. It combines those changes with your existing work in the testing branch (commit D)
