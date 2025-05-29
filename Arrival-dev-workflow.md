@@ -133,8 +133,6 @@ This guide explains how to work on code and tests in parallel using separate Git
 
    If you see conflicts (Git will tell you), see the "Handling Conflicts" section below.
 
-   Step 1: Initial state
-   
    ![Git Workflow Step 1](https://raw.githubusercontent.com/rtreacy87/git-notes/main/figures/git_workflow_step1.png)
 
   In the initial state:
@@ -144,10 +142,7 @@ This guide explains how to work on code and tests in parallel using separate Git
    3. `testing` branch has commit A plus your test-specific commit D
 
   
-   Step 2: After git pull origin main
-   
-   
-  ![Git Workflow Step 2](https://github.com/rtreacy87/git-notes/figures/git_workflow_step2.png)  
+   ![Git Workflow Step 2](https://raw.githubusercontent.com/rtreacy87/git-notes/main/figures/git_workflow_step2.png)
 
    After running `git pull origin main`, only your local main branch is updated with commits B and C from the remote main branch. 
 
@@ -158,8 +153,6 @@ This guide explains how to work on code and tests in parallel using separate Git
 
    The `git merge main` command that follows is what actually brings those changes (B and C) from your local main branch into your testing branch.
 
-   Step 3: After git merge main
-   
   ![Git Workflow Step 3](https://github.com/rtreacy87/git-note/sfigures/git_workflow_step3.png)  
 
     After `git merge main` is called:
@@ -173,12 +166,6 @@ This guide explains how to work on code and tests in parallel using separate Git
    - The other parent is the latest main branch commit (C)
 
    The result is that your testing branch now contains all your test-specific changes (D) plus all the latest application code changes from main (B and C), allowing you to write tests against the most current code.
-
-    Legend: 
-   - A,B,C,D = commits
-   - M = merge commit
-   - Vertical lines = branch timeline (each column represents a separate branch)
-   - Horizontal lines = commits being merged from one branch to another
 
    The process then updates your local main with the latest changes from remote (B and C), and then merges those changes into your testing branch, creating a merge commit M that combines everything.
 
